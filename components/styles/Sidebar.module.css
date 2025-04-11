@@ -1,0 +1,220 @@
+.sidebarContainer {
+    display: flex;
+    height: 100vh; /* Adjust as needed */
+    width: auto;
+  }
+  
+  .companyBar {
+    display: flex;
+    flex-direction: column;
+    width: 60px; /* Adjust width as needed */
+    background-color: #f0f0f0; /* Light background */
+    padding: 10px 0;
+    align-items: center;
+  }
+  
+  .companyLogo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Adds rounded corners */
+    border: 1px solid #ccc; /* Adds a 1px light grey border (#ccc is a light grey color) */
+}
+  
+  .companyLogo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .companyLogo.selected {
+    opacity: 1;
+    border-left: 3px solid #007bff; /* Highlight color */
+  }
+  
+  .contentBar {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    width: 250px; /* Default width */
+    transition: width 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .contentBar.collapsed {
+    width: 60px;
+  }
+  
+  .collapseButton {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .head {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .campaignDropdown {
+    position: relative;
+  }
+  
+  .selectedCampaign {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .campaignIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  
+  .campaignIcon svg {
+    font-size: 0.8em;
+    color: #999;
+    margin-right: 4px;
+  }
+  
+  .dropdownArrow {
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Implement dropdownList styling when you add the actual dropdown */
+  /* .dropdownList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .dropdownList li {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdownList li:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .dropdownList li.selected {
+    background-color: #e9ecef;
+    font-weight: bold;
+  } */
+  
+  .center {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
+  
+  .mainList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mainItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .mainItem:hover {
+    background-color: #e1f4f7;
+  }
+  
+  .mainItem.selected {
+    background-color: #d7dade;
+  }
+  
+  .itemIcon {
+    margin-right: 8px;
+    font-size: 1em;
+    color: #555;
+  }
+
+  .subList {
+    list-style: none;
+    padding-left: 15px; /* Indent the sublist */
+    margin: 0 0 5px 0; /* Add bottom margin to the sublist */
+  }
+  
+  .subItem {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .subItem:hover {
+    background-color: #e1f4f7;;
+
+  }
+  
+  .subItem.selected {
+    background-color: #e9ecef;
+  }
+  
+  .bottom {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background: #f9f9f9;
+  }
+  
+  .bottomList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bottomItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .bottomItem:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .bottomItem.selected {
+    background-color: #e9ecef;
+    font-weight: bold;
+  }
