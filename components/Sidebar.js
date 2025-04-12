@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 
-const   Sidebar = () => {
+const  Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState('test_brand');
@@ -104,8 +104,8 @@ const   Sidebar = () => {
         <div className={styles.head}>
           <DropdownMenu className={styles.campaignDropdown}>
             <DropdownMenuTrigger className={styles.selectedCampaign}>
-                <div class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-400 rounded-[10px] dark:bg-gray-600">
-                    <span class="font-light text-white">{selectedCampaign
+                <div className="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-400 rounded-[10px] dark:bg-gray-600">
+                    <span classname="font-light text-white">{selectedCampaign
                       .split('_')
                       .map((word) => word.charAt(0).toUpperCase())
                       .join('')}</span>

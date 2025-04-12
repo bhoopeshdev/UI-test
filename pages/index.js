@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Sidebar from "../components/Sidebar"
+import Main from "../components/Main"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,9 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-row">
      <Sidebar />
+     <Main />
     </div>
   );
 }
