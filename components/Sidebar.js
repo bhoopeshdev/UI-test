@@ -8,7 +8,15 @@ import { IoIosHelpCircleOutline } from "react-icons/io";
 import { CiSettings } from "react-icons/ci";
 import styles from './styles/Sidebar.module.css'; // Create a CSS module file
 
-const Sidebar = () => {
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+
+const   Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const [selectedCampaign, setSelectedCampaign] = useState('test_brand');
@@ -18,8 +26,8 @@ const Sidebar = () => {
   const campaignOptions = [
     { name: 'test_brand' },
     { name: 'summer_sale' },
-    { name: 'new_product_launch' },
-    { name: 'holiday_campaign' },
+    { name: 'new_product' },
+    { name: 'holiday_cp' },
   ];
   const mainItems = [
     { name: 'Home', icon: <IoHomeOutline /> },
@@ -94,8 +102,8 @@ const Sidebar = () => {
 
         {/* Head Component */}
         <div className={styles.head}>
-          <div className={styles.campaignDropdown}>
-            <div className={styles.selectedCampaign}>
+          <DropdownMenu className={styles.campaignDropdown}>
+            <DropdownMenuTrigger className={styles.selectedCampaign}>
                 <div class="relative inline-flex items-center justify-center w-8 h-8 overflow-hidden bg-gray-400 rounded-[10px] dark:bg-gray-600">
                     <span class="font-light text-white">{selectedCampaign
                       .split('_')
@@ -104,7 +112,20 @@ const Sidebar = () => {
                 </div>
               {selectedCampaign}
               <FaAngleDown onClick={() => {}} className={styles.dropdownArrow} /> {/* Add dropdown functionality */}
-            </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {campaignOptions.map((campaign) => (
+                <DropdownMenuItem
+                  key={campaign.name}
+                  onClick={() => handleCampaignSelect(campaign.name)}
+                  className={selectedCampaign === campaign.name ? styles.selected : ''}
+                >
+                  <span className={styles.campaignIcon}>
+                    {campaign.name}
+                  </span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
             {/* Implement actual dropdown list here */}
             {/* For now, just showing the options */}
             {/* <ul className={styles.dropdownList}>
@@ -125,7 +146,7 @@ const Sidebar = () => {
                 </li>
               ))}
             </ul> */}
-          </div>
+          </DropdownMenu>
           <div className={styles.collapseButton} onClick={toggleCollapse}>
             {isCollapsed ? <MdKeyboardDoubleArrowRight /> : <MdKeyboardDoubleArrowLeft />}
           </div>

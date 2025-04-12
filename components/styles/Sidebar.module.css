@@ -7,15 +7,16 @@
   .companyBar {
     display: flex;
     flex-direction: column;
-    width: 60px; /* Adjust width as needed */
+    width: 45px; /* Adjust width as needed */
     background-color: #f0f0f0; /* Light background */
-    padding: 10px 0;
+    padding: 8px 0;
     align-items: center;
+    font-size: x-small;
   }
   
   .companyLogo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-bottom: 15px;
     cursor: pointer;
     opacity: 0.6;
@@ -31,36 +32,37 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    border-radius: 10px; /* Adds rounded corners */
   }
   
   .companyLogo.selected {
     opacity: 1;
-    border-left: 3px solid #007bff; /* Highlight color */
-  }
+    border: 2px solid #969697; /* Highlight color */
+  } 
   
   .contentBar {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-right: 1px solid #eee;
-    width: 250px; /* Default width */
+    width: 200px; /* Default width */
     transition: width 0.3s ease;
     overflow: hidden;
   }
   
   .contentBar.collapsed {
-    width: 60px;
+    width: 45px;
   }
   
   .collapseButton {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
   }
   
   .head {
-    padding: 15px;
+    padding: 10px;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
@@ -74,28 +76,28 @@
   .selectedCampaign {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 5px 8px;
     border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
   }
   
   .campaignIcon {
     display: flex;
     align-items: center;
-    margin-right: 8px;
+    margin-right: 5px;
   }
   
   .campaignIcon svg {
-    font-size: 0.8em;
+    font-size: 0.6em;
     color: #999;
     margin-right: 4px;
   }
   
   .dropdownArrow {
-    font-size: 0.8em;
+    font-size: 0.6em;
     color: #666;
   }
   
@@ -132,7 +134,7 @@
   } */
   
   .center {
-    padding: 15px;
+    padding: 10px;
     flex-grow: 1;
     overflow-y: auto;
     background: #f9f9f9;
@@ -147,7 +149,7 @@
   .mainItem {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -162,19 +164,19 @@
   }
   
   .itemIcon {
-    margin-right: 8px;
+    margin-right: 5px;
     font-size: 1em;
     color: #555;
   }
 
   .subList {
     list-style: none;
-    padding-left: 15px; /* Indent the sublist */
+    padding-left: 10px; /* Indent the sublist */
     margin: 0 0 5px 0; /* Add bottom margin to the sublist */
   }
   
   .subItem {
-    padding: 8px 12px;
+    padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -190,7 +192,7 @@
   }
   
   .bottom {
-    padding: 15px;
+    padding: 10px;
     border-top: 1px solid #eee;
     background: #f9f9f9;
   }
@@ -204,7 +206,7 @@
   .bottomItem {
     display: flex;
     align-items: center;
-    padding: 8px 12px;
+    padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -216,5 +218,4 @@
   
   .bottomItem.selected {
     background-color: #e9ecef;
-    font-weight: bold;
   }
