@@ -31,7 +31,7 @@ export default function DateRangePicker() {
         dateFormat="MMM dd, yyyy"
         popperPlacement="bottom-start"
         customInput={
-          <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-md text-sm bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button className="flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-md text-sm bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <CalendarDays className="w-5 h-5 text-gray-500" />
             <span className="text-gray-700 text-xs">
               {startDate && endDate
